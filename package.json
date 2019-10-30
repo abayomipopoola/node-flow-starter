@@ -1,0 +1,39 @@
+{
+  "name": "node-flow-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:node": "babel src/ -d lib/",
+    "flow": "flow",
+    "develop": "flow && cross-env NODE_ENV=development babel-node src/index.js",
+    "start": "cross-env NODE_ENV=production node lib/index.js",
+    "test": "jest"
+  },
+  "jest": {
+    "transform": {
+      ".*": "<rootDir>/node_modules/babel-jest"
+    }
+  },
+  "keywords": ["node", "nodejs", "flowjs", "jest"],
+  "author": "Abayomi Popoola",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.6.4",
+    "@babel/core": "^7.6.4",
+    "@babel/node": "^7.6.3",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-flow": "^7.0.0",
+    "cross-env": "^6.0.3",
+    "eslint": "^6.6.0",
+    "flow-bin": "^0.110.1",
+    "jest": "^24.9.0",
+    "supertest": "^4.0.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "debug": "^4.1.1",
+    "express": "^4.17.1",
+    "morgan": "^1.9.1"
+  }
+}
